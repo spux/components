@@ -6,7 +6,7 @@ import Plyr from 'https://jspm.dev/plyr'
 const MediaObject = props => {
   if (props.contentUrl.includes('youtube.com')) {
     return html`
-      <div class="container">
+      <div ...${props} class="container">
         <div
           id="player"
           data-plyr-provider="youtube"
@@ -16,7 +16,7 @@ const MediaObject = props => {
     `
   } else if (props.contentUrl.includes('vimeo.com')) {
     return html`
-      <div class="container">
+      <div ...${props} class="container">
         <div
           id="player"
           data-plyr-provider="vimeo"
@@ -26,7 +26,7 @@ const MediaObject = props => {
     `
   } else {
     return html`
-      <video id="player" playsinline controls>
+      <video ...${props} id="player" playsinline controls>
         <source src="${props.contentUrl}" type="video/mp4" />
       </video>
     `
