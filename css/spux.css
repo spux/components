@@ -22,6 +22,9 @@
   .\32 {
     width: 15%;
   }
+  .\36 {
+    width: 49%;
+  }
   .row {
     display: table;
     border-spacing: 1em 0;
